@@ -1,0 +1,16 @@
+[Event "🇪🇸 Ruy Lopez 🇪🇸: Morphy Defense Closed"]
+[Site "https://lichess.org/study/ZkCxh0nB/h3ZBOKnz"]
+[Result "*"]
+[UTCDate "2021.02.26"]
+[UTCTime "21:36:47"]
+[Variant "Standard"]
+[ECO "C92"]
+[Opening "Ruy Lopez: Closed"]
+[Annotator "https://lichess.org/@/LeninPerez"]
+
+{ Now I will show you the main line of the Ruy Lopez opening or Spanish Opening.
+
+Make the first move pls }
+1. e4 { Your first move :) } 1... e5 { Now? } 2. Nf3 { That's! } 2... Nc6 { And now? } 3. Bb5 { Great job! This is the Ruy Lopez :) } 3... a6 { This move (3.a6) is the most common response to the Ruy Lopez opening, so you will probably come across it a lot in your games. This defense is known as "The Morphy Defense."
+Your bishop is being attacked, what is the best square for this bishop? } { [%cal Ba7a6] } 4. Ba4 { Very good! Your bishop must continue on the diagonal against the black king! } { [%cal Ga4e8] } 4... Nf6 { Don't worry about Nxe4, just pay attention to the castling } { [%csl Gg1][%cal Ge1g1] } 5. O-O b5 6. Bb3 Be7 { Well now if you should worry Nxe4! Defend your e4 pawn in the best way } 7. Re1 { Excellent! } { [%cal Ge1e4] } 7... O-O { You want to play d4, but you are not ready for this. How do you reinforce the d4 square with a pawn? } 8. c3 { Very good! } { [%csl Bd4][%cal Bd2d4,Bc3d4] } 8... d6 { Now the black player's c8 bishop can annoy you if it reaches g4, how can you block this? } { [%csl Rg4][%cal Rc8g4] } 9. h3 { Very good! This is the main line.
+This is all theory, I could teach you more theory, but then your head will explode! I'll just tell you that you can plan to play d4 in the future :) } *
