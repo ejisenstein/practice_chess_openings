@@ -11,12 +11,30 @@ from chessboard import display
 from custom_classes import Classboard
 from game_state import persistent_game_state
 from custom_functions import render_svg
+from pathlib import Path
 
+p = Path('.')
+opening_file_path = p / 'openings'
+# for file_name in new_file_path.iterdir():
+#     st.write(str(file_name)) 
 
-pgn_md = open("rl_morphys_defense.pgn")
+openings_list = [str(file_name).replace('openings/', "") for file_name in opening_file_path.iterdir()]
+opening_choice = st.selectbox('Choose your opening', openings_list)
+
+variation_file_path = opening_file_path / opening_choice
+variation_list = [str(file_name).replace('openings/' + opening_choice + '/', "") for file_name in variation_file_path.iterdir()]
+cleaned_variation_list = [v.replace('.pgn', "") for v in variation_list]
+variation_choice = st.selectbox('Choose your variation', cleaned_variation_list)
+
+user_variation_decision = p / opening_file_path/ opening_choice / variation_choice
+
+user_opening_variation_choice = open(str(user_variation_decision) + ".pgn")
+
+# st.write(user_opening_variation_choice)
+
 
 #Turning chess 
-correct_open_variation = chess.pgn.read_game(pgn_md)
+correct_open_variation = chess.pgn.read_game(user_opening_variation_choice)
 # play_mode = st.checkbox("check to start game, then submit first move")
 
 @dataclasses.dataclass
@@ -49,20 +67,23 @@ if not state.game_over:
             state.move_index += 1
             with st.spinner('Computer thinking of response, please wait'):
                 time.sleep(5)
-                st.success('Done!')
             state.board.push(state.correct_moves[state.move_index]) #correct computer response
             state.move_index += 1
             st.write("Correct! you have made the right move. Your opponent has responded. Can you keep on going?")
             st.write(state.correct_moves[state.move_index]) #Delete this later, but keep for testing
-            render_svg(chess.svg.board(state.board))
+            # render_svg(chess.svg.board(state.board))
         elif chess.Move.from_uci(user_move) in state.board.legal_moves and user_move != str(state.correct_moves[state.move_index]) and submit_answer:
             state.game_over = True
             st.warning(f"Unfortunately you did not make the correct move. You selected {user_move} but the correct move is {state.correct_moves[state.move_index]}. To restart press New Game")
         elif user_move not in state.board.legal_moves and submit_answer: 
             st.warning("Im sorry but your move didn't register. Please make sure that you include both moves together without spaces in the following format (a1h8)")
     except AttributeError:
+        st.write("This is an attribute error")
         st.write("Select New Game to begin")        
-        st.image("./white_start.png")
+        # st.image("./white_start.png")
     except IndexError:
+        state.game_over = True
         st.balloons()
         st.success("Congratulations, You have successfully completed the variationl, press New Game to begin again")
+        
+    render_svg(chess.svg.board(state.board))

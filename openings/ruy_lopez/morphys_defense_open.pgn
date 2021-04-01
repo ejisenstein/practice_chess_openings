@@ -1,0 +1,13 @@
+[Event "🇪🇸 Ruy Lopez 🇪🇸: Morphy Defense Open"]
+[Site "https://lichess.org/study/ZkCxh0nB/ko4l9gQE"]
+[Result "*"]
+[UTCDate "2021.02.26"]
+[UTCTime "21:49:03"]
+[Variant "Standard"]
+[ECO "C80"]
+[Opening "Ruy Lopez: Open, Bernstein Variation"]
+[Annotator "https://lichess.org/@/LeninPerez"]
+
+{ Make the first moves :) }
+1. e4 e5 2. Nf3 Nc6 3. Bb5 { Great job! } 3... a6 { You already know the Morphy Defense, now play the moves that you already know :) } { [%cal Ba7a6] } 4. Ba4 { Very good! } { [%cal Ga4e8] } 4... Nf6 { What should you do now? } 5. O-O { That's! } 5... Nxe4 { Now that the knight takes the pawn, this is called the Open Morphy Defense. This variation is considered lower for black, but it is not bad, in fact, you will come across this variation many times in your games.
+You must respond with 6.d4 } { [%csl Gd4][%cal Gd2d4] } 6. d4 b5 7. Bb3 d5 { Capture the pawn } 8. dxe5 Be6 { Play Nbd2 } { [%csl Gd2][%cal Gb1d2] } 9. Nbd2 Nc5 { Your opponent is threatening to double pawns on the b column, what should you do then? } { [%csl Rb3][%cal Rc5b3] } 10. c3 { Very good! Now the queen defends your bishop } { [%cal Gd1b3] } 10... Be7 { However, your bishop is a bit sad. Can you find a better diagonal for this bishop? } { [%csl Rb3] } 11. Bc2 { Very good! This diagonal is better for your bishop, and now you have one more pawn! This is why the Morphy Open Defense is considered not so good for the black player. } { [%cal Gc2h7,Gc2b1] } *
