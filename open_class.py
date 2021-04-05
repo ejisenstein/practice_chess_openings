@@ -8,7 +8,6 @@ import dataclasses
 import time
 
 from chessboard import display
-from custom_classes import Classboard
 from game_state import persistent_game_state
 from custom_functions import render_svg
 from pathlib import Path
